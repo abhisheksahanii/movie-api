@@ -6,11 +6,11 @@ app.listen(8080,()=>{
 });
 
 app.get("/url", (req, res, next) => {
-    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+    loadJSON('db.json')
    });
 
-function sayHello(name){
-    console.log('Hello' + name);
-}
+// function sayHello(name){
+//     console.log('Hello' + name);
+// }
 
-sayHello('Mosh');
+// sayHello('Mosh');
