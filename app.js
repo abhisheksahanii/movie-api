@@ -5,9 +5,16 @@ app.listen(8080,()=>{
     console.log("Server is running on port 8080.")
 });
 
-app.get("/url", (req, res, next) => {
-    loadJSON('db.json')
-   });
+const fs = require('fs');
+fs.readFile('./db.json','utf-8',(err,jsonString)=>{
+    if (err){
+        console.log(err);
+    }
+    else{
+        const data = JSON.parse(jsonString);
+        console.log(jsonString);
+    }
+});
 
 // function sayHello(name){
 //     console.log('Hello' + name);
