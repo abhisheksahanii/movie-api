@@ -22,10 +22,10 @@ app.listen(process.env.PORT || 3000, function(){
 });
 
 
-server.use(middlewares);
-server.use(router);
+app.use(middlewares);
+app.use(router);
 
-server.listen(port);
+app.listen(port);
 
 // function sayHello(name){
 //     console.log('Hello' + name);
