@@ -7,16 +7,13 @@ var app = express();
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
-  
+
 const fs = require('fs');
-fs.readFile('./db.json','utf-8',(err,jsonString)=>{
-    if (err){
-        console.log(err);
-    }
-    else{
-        const data = JSON.parse(jsonString);
-        console.log(jsonString);
-    }
+
+fs.readFile('db.json','utf-8',(err,data)=>{
+    if (err) throw err;
+    let movie = JSON.parse(data);
+    console.log(movie);
 });
 
 // function sayHello(name){
