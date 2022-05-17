@@ -12,10 +12,7 @@ app.listen(process.env.PORT || 3000, function(){
 
 var movie = require('./db.json');
 
-// const fs = require('fs');
-// fs.readFile('db.json','utf-8',(err,data) => {
-//     if (err) throw err;
-//     let movie = JSON.parse(data);
+
 console.log(movie);
     // });
 
@@ -24,8 +21,3 @@ console.log(movie);
 
 
 
-// function sayHello(name){
-//     console.log('Hello' + name);
-// }
-
-// sayHello('Mosh');
